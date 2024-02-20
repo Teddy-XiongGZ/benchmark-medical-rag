@@ -335,53 +335,44 @@
   </div>
 </section>
 
-
-
 <section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Corpus selection</h2>
-        <div class="content has-text-justified">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Corpus Selection. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Corpus selection</h2>
           <p>
             Results above indicate that PubMed and the MedCorp corpus are the only corpora with which <span class="dnerf">MedRag</span> can outperform CoT on all tasks in <span class="dnerf">Mirage</span>. As a large-scale corpus, PubMed serves as a suitable document collection for various kinds of medical questions. If resources permit, the MedCorp corpus could be a more comprehensive and reliable choice: Nearly all <span class="dnerf">MedRag</span> settings using the MedCorp Corpus show improved performance (green-coded cells) compared to the CoT prompting baseline. In general, single corpora other than PubMed are not recommended for medical QA due to their limited volumes of medical knowledge, but they can also be beneficial in specific tasks such as question answering for medical examinations.
           </p>
         </div>
       </div>
-    </div>
-</div>
-</section>
+      <!--/ Corpus Selection. -->
 
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Retriever selection</h2>
-        <div class="content has-text-justified">
+      <!-- Retriever Selection. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Retriever selection</h2>
           <p>
             Among the four individual retrievers used in <span class="dnerf">MedRag</span>, MedCPT is the most reliable one which constantly outperforms other candidates with a higher average score on <span class="dnerf">Mirage</span>. BM25 is a strong retriever as well, which is also supported by other evaluations. The fusion of retrievers can provide robust performance but must be utilized with caution for the retrievers included. As for the PubMed corpus recommended above, a RRF-2 retriever that combines the results from BM25 and MedCPT can be a good selection, since they perform better than the other two with snippets from PubMed. For the MedCorp corpus, both RRF-2 and RRF-4 can be reliable choices, as the corpus can benefit all four individual retrievers in <span class="dnerf">MedRag</span>. 
           </p>
         </div>
       </div>
-    </div>
-</div>
-</section>
-
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">LLM selection</h2>
-        <div class="content has-text-justified">
+      <!--/ Retriever Selection. --> 
+      
+      <!-- LLM Selection. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">LLM selection</h2>
           <p>
             Currently, GPT-4 is the best model with about 80% accuracy on <span class="dnerf">Mirage</span>. However, it is much more expensive than other backbone LLMs. GPT-3.5 can be a more cost-efficient choice than GPT-4, which shows great capabilities of following <span class="dnerf">MedRag</span> instructions. For high-stakes scenarios such as medical diagnoses where patient privacy should be a key concern, the best open-source Mixtral model, which can be deployed locally and run offline, could be a viable option.
           </p>
         </div>
       </div>
+      <!--/ LLM Selection. -->    
     </div>
-</div>
+  </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
